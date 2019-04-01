@@ -8,17 +8,18 @@ class Pokemon
     public $Weakness;
     public $Resistance;
 
-    public function __construct($nm, $healthp, $hitp, $et)
+    public function __construct($name, $energyType, $healthPoints, $hitPoints)
     {
-        $this->Name = $nm;
-        $this->EnergyType = $et;
-        $this->Health = $healthp;
-        $this->Hitpoints = $hitp;
+        $this->Name = $name;
+        $this->EnergyType = $energyType;
+        $this->Health = $healthPoints;
+        $this->Hitpoints = $hitPoints;
         $this->Attack = [];
     }
 
     function DoAttack($pokemon, $pokemon2, $target)
     {
+      echo "attack";
         echo $this->Name . ' Will attack ' . $target->Name . ' Using ' . $this->Attack[0]->Name;
         echo '<br>';
         if ($pokemon->EnergyType == $pokemon2->Weakness->EnergyType) {
