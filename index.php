@@ -16,29 +16,26 @@
 <?php
 
 require 'Pokemon.php';
+require 'Charmeleon.php';
+require 'Pikachu.php';
 require 'Attack.php';
 require 'Resistance.php';
 require 'Weakness.php';
 
-$pokemon = new Pokemon("Pikachu", 60, 60, "Lightning");
-$pokemon->Attack[] = new Attack("Electric Ring", 50);
-$pokemon->Attack[] = new Attack("Pika Punch", 20);
-$pokemon->Weakness = new Weakness("Fire", 1.5);
-$pokemon->Resistance = new Resistance("Fighting", 20);
+$tackle = new Attack('tackle', '60');
 
-$pokemon2 = new Pokemon("Charmeleon", 60, 60, "Fire");
-$pokemon2->Attack[] = new Attack("Head Butt", 10);
-$pokemon2->Attack[] = new Attack("Flare", 30);
-$pokemon2->Weakness = new Weakness("Water", 2);
-$pokemon2->Resistance = new Resistance("Fire", 10);
+$pokemon = new Pikachu();
 
+$pokemon2 = new Charmeleon();
+// echo "<pre>";
+// print_r($pokemon);
 ?>
 <div style="background : white; display: inline-block; padding: 10px;">
   <?php
-echo $pokemon2->Name . " HP " . $pokemon2->Health . "/" . $pokemon2->Hitpoints;
+echo $pokemon2->getName() . " HP " . $pokemon2->getHealth() . "/" . $pokemon2->getHitPoints();
 echo '<br>';
 
-echo $pokemon->Name . " HP " . $pokemon->Health . "/" . $pokemon->Hitpoints;
+echo $pokemon->getName() . " HP " . $pokemon->getHealth() . "/" . $pokemon->getHitPoints();
 echo '<br>';
 echo '<br>';
 $pokemon->DoAttack($pokemon, $pokemon2, $pokemon2);
