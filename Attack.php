@@ -15,15 +15,7 @@ class Attack
       return $this->attackName;
     }
 
-    public function setName(){
-      $this->Attackname = $attackName;
-    }
-//////////////////
     public function getDamage(){
       return $this->damage;
-    }
-
-    public function setDamage(){
-      $this->damage = $damage;
     }
 }

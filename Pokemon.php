@@ -23,31 +23,15 @@ class Pokemon
       return $this->name;
     }
 
-    public function setName()
-    {
-      $this->name = $name;
-    }
-/////////
     public function getHealth()
     {
       return $this->health;
     }
 
-    public function setHealth()
-    {
-      $this->health = $health;
-    }
-//////
     public function getHitPoints()
     {
       return $this->hitPoints;
     }
-
-    public function setHitPoints()
-    {
-      $this->hitPoints = $hitPoints;
-    }
-
 
     function DoAttack($pokemon, $pokemon2, $target)
     {

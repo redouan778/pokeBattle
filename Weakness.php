@@ -15,15 +15,7 @@ class Weakness
       return $this->energyType;
     }
 
-    public function setEnergyType(){
-      $this->energyType = $energyType;
-    }
-    /////////////
     public function getMultiplier(){
       return $this->name;
-    }
-
-    public function setMultiplier(){
-      $this->multiplier = $multiplier;
     }
 }

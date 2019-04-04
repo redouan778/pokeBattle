@@ -22,22 +22,23 @@ require 'Attack.php';
 require 'Resistance.php';
 require 'Weakness.php';
 
-$tackle = new Attack('tackle', '60');
-
+//Create new pokemon
 $pokemon = new Pikachu();
-
+//Create new pokemon
 $pokemon2 = new Charmeleon();
-// echo "<pre>";
-// print_r($pokemon);
+
 ?>
 <div style="background : white; display: inline-block; padding: 10px;">
   <?php
-echo $pokemon2->getName() . " HP " . $pokemon2->getHealth() . "/" . $pokemon2->getHitPoints();
+//Defines the attack, name and the health from each pokemon. And show the current status from each pokemon.
+//Pikachu
+echo $pokemon->getName() . " HP " . $pokemon->getHealth();
+echo '<br>';
+//Charmeleon
+echo $pokemon2->getName() . " HP " . $pokemon2->getHealth();
+echo '<br>';
 echo '<br>';
 
-echo $pokemon->getName() . " HP " . $pokemon->getHealth() . "/" . $pokemon->getHitPoints();
-echo '<br>';
-echo '<br>';
 $pokemon->DoAttack($pokemon, $pokemon2, $pokemon2);
 echo '<br>';
 echo '<br>';
