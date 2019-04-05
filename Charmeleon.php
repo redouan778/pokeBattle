@@ -10,6 +10,5 @@ class Charmeleon extends Pokemon{
     $this->attacks[] = new Attack("Flare", 30);
     $this->Weakness = new Weakness("water", 2);
     $this->Resistance = new Resistance("fire", 10);
-
   }
 }

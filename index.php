@@ -39,14 +39,14 @@ echo $pokemon2->getName() . " HP " . $pokemon2->getHealth();
 echo '<br>';
 echo '<br>';
 
-$pokemon->DoAttack($pokemon, $pokemon2, $pokemon2);
+$pokemon->DoAttack($pokemon2);
 echo '<br>';
 echo '<br>';
 
-$pokemon2->DoAttack($pokemon2, $pokemon, $pokemon);
+$pokemon2->DoAttack($pokemon);
 echo '<br>';
 echo '<br>';
 
-$pokemon->DoAttack($pokemon, $pokemon2, $pokemon2);
+$pokemon->DoAttack($pokemon2);
  ?>
 </div>

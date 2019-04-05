@@ -33,20 +33,21 @@ class Pokemon
       return $this->hitPoints;
     }
 
-    function DoAttack($pokemon, $pokemon2, $target)
+
+    function DoAttack($target)
     {
-        echo $this->name . ' Will attack ' . $target->name . ' Using ' . $this->attacks[0]->getName();
+        echo $this->name . ' Will attack ' . $target->getName() . ' Using ' . $this->attacks[0]->getName();
         echo '<br>';
-        if ($pokemon->energyType == $pokemon2->Weakness->energyType) {
-            $pokemon2->health = $pokemon2->health - ($pokemon->attacks[0]->attackPoints * $pokemon2->weakness->multiplier);
+        if ($this->energyType == $target->Weakness->energyType) {
+            $target->health = $target->health - ($this->attacks[0]->attackPoints * $target->weakness->multiplier);
         } else {
-            $pokemon2->health = $pokemon2->health - $pokemon->attacks[0]->attackPoints;
+            $target->health = $target->health - $this->attacks[0]->attackPoints;
         }
 
-        if ($pokemon2->health < 1) {
-            echo $pokemon2->name . " Has Died ";
+        if ($target->health < 1) {
+            echo $target->name . " Has Died ";
         } else {
-            echo $pokemon2->name . " Now Has " . $pokemon2->health . " HP Left";
+            echo $target->name . " Now Has " . $target->health . " HP Left";
         }
     }
 }
